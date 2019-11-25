@@ -1,6 +1,6 @@
 //Routine that finds the kaprekarNumbers withing given range
 //I have made this while completing a chalenge in HackerRank
-
+#include <vector>
 
 std::vector<int> kaprekarNumbers(int p, int q) {
 	std::vector<int> to_return;

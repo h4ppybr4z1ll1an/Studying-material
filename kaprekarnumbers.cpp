@@ -1,4 +1,4 @@
-//Routine that finds the kaprekarNumbers withing given range
+//Routine that finds the kaprekarNumbers within given range
 //I have made this while completing a chalenge in HackerRank
 #include <vector>
 

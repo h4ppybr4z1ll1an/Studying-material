@@ -131,7 +131,6 @@ int queensAttack(long long int n, long long int k, long long int r_q, long long 
     moves += (queen - nw_max) / (n + 1) - has_nw + (se_max - queen) / (n + 1) - has_se;
     moves += (queen - ne_max) / (n - 1) - has_ne + (sw_max - queen) / (n - 1) - has_sw;
     
-    //Sorry for english mistakes, portuguese is my mother tongue.
     //Some variables only exist for the sake of readability or for some calculations to not happen twice, although I suspect
     //the compiler would optimize anyways.
     //With little modification it's possible to find which coordinates the queen can go, thus being useful for a chess game

@@ -7,26 +7,26 @@ void merge_sort(int* p_array, int size) {
 		return;
 
 	int odd = size & 1 ? 1 : 0;
-	int* arrA = p_array;
-	int* arrB = p_array + (size / 2);
+	int* arr_a = p_array;
+	int* arr_b = p_array + (size / 2);
 
-	merge_sort(arrA, size / 2);
-	merge_sort(arrB, size / 2 + odd);
+	merge_sort(arr_a, size / 2);
+	merge_sort(arr_b, size / 2 + odd);
 
 	int* temp_array = new int[size];
-	int arrAIndex = 0;
-	int arrBIndex = 0;
+	int arr_a_index = 0;
+	int arr_b_index = 0;
 
 	for (int i = 0; i < size; i++) {
-		if (arrAIndex >= size / 2) {
-			temp_array[i] = arrB[arrBIndex++];
+		if (arr_a_index >= size / 2) {
+			temp_array[i] = arr_b[arr_b_index++];
 			continue;
 		}
-		if (arrBIndex >= size / 2 + odd) {
-			temp_array[i] = arrA[arrAIndex++];
+		if (arr_b_index >= size / 2 + odd) {
+			temp_array[i] = arr_a[arr_a_index++];
 			continue;
 		}
-		temp_array[i] = arrA[arrAIndex] < arrB[arrBIndex] ? arrA[arrAIndex++] : arrB[arrBIndex++];
+		temp_array[i] = arrA[arr_a_index] < arrB[arr_b_index] ? arrA[arr_a_index++] : arrB[arr_b_index++];
 	}
 
 	for (int i = 0; i < size; i++) {

@@ -1,13 +1,13 @@
 #include <iostream>
 
-bool is_pangram(std::string sentence) {
+bool is_pangram(const std::string& sentence) {
 
 	const int to_compare = 0x3FFFFFF;
 	int to_store = 0;
-	for (char x : sentence) {
+	for (auto x : sentence) {
 		to_store |= 1 << tolower(x) - 'a';
 	}
-	return (to_compare & to_store) == to_compare;
+	return !(to_compare ^ to_store);
 }
 
 

@@ -1,24 +1,27 @@
 //My FizzBuzz solution.
 
+#include <iostream>
+#include <string>
+#include <map>
+int main()
+{
+    std::map<int, std::string> numbers{
+        {3,"Fizz"},
+        {5, "Buzz"}
+    };
 
-void print(unsigned int n) {	
-	if (n % 3 && n % 5 || n < 3) {
-		std::cout << n;
-	}
-	else {
-		if (!(n % 3 ))
-			std::cout << "Fizz";
-		if (!(n % 5))
-			std::cout << "Buzz";
-	}
+    for (int i = 0; i < 100; ++i) {
+        std::string to_print;
+        
+        for (auto& val : numbers) 
+            if (!(i % val.first) && i > 0) 
+                to_print += val.second;
+            
+        if (!to_print.size())
+            to_print += std::to_string(i);
 
-	std::cout << std::endl;
+        std::cout << to_print << "\n";
 
-}
+    }
 
-
-void fizzbuzz(unsigned int n) {
-	for (unsigned int i = 1; i <= n; i++) {
-		print(i);	
-	}
 }

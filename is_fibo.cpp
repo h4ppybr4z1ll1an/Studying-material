@@ -1,7 +1,7 @@
 //My solution to the problem available at https://www.hackerrank.com/challenges/is-fibo/problem
 
 
-using largest_int = long long;
+using largest_int = std::intmax_t;
 
 constexpr int NTH_FIB = 70;
 
